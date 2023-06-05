@@ -12,7 +12,7 @@ seoul	            return
 ["Jane", "Kim"]	    "김서방은 1에 있다" 
 */
 
-//내 풀이
+// 내 풀이
 function solution(seoul) {
     var answer = '';
     
@@ -23,3 +23,11 @@ function solution(seoul) {
     })
     return answer;
 }
+
+// 다른 사람 풀이
+function findKim(seoul){
+    var idx = seoul.indexOf('Kim');
+  
+    return "김서방은 " + idx + "에 있다";
+  }
+  
