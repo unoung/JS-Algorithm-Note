@@ -44,7 +44,7 @@ function toWeirdCase(s){
     var arr = s.split(' ');
 
     for(var i in arr){
-        for(var j=0; j<arr[i].length; j++){
+        for(var j = 0; j < arr[i].length; j++){
             var t = arr[i][j]; 
             str += (j % 2 === 0) ? t.toUpperCase() : t.toLowerCase();
         }
