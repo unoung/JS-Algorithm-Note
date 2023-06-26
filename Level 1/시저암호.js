@@ -21,7 +21,6 @@ function solution(s, n) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
     var upper_alp = alphabet.toUpperCase();
 
-
     
      for(let i = 0; i < s.length; i ++){
         if(s[i] == " "){
