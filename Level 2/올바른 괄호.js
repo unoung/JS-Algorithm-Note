@@ -42,3 +42,32 @@ function solution(s){
     return openBracket === 0;
 }
 
+//풀이 2
+function solution(s) {
+    const stack = [];
+
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === '(') {
+            stack.push('(');
+        } else {
+            if (stack.length === 0) {
+                return false;
+            }
+            stack.pop();
+        }
+    }
+
+    return stack.length === 0;
+}
+
+
+/* 
+return stack.length === 0;은 스택이 비어있는지를 확인하여 올바른 괄호인지를 판별하는 부분입니다.
+만약 올바른 괄호라면, 모든 '('는 짝지어서 스택에서 제거되어 최종적으로 스택이 비어있게 됩니다. 
+따라서 stack.length === 0이 참이 되어야 합니다. 이 경우에는 true를 반환합니다.
+하지만 올바르지 않은 괄호라면, 여는 괄호인 '('와 닫는 괄호인 ')'의 개수가 맞지 않거나, 올바른 짝지어진 괄호가 아니기 때문에 일부 '('가 스택에 남아있을 것입니다. 
+이 경우에는 stack.length === 0이 거짓이 되어야 합니다. 따라서 false를 반환합니다.
+
+즉, return stack.length === 0;는 스택이 비어있는지를 확인하여 올바른 괄호인지를 판별하는 조건문입니다.
+스택이 비어있다면 true를 반환하고, 그렇지 않다면 false를 반환합니다.
+*/
